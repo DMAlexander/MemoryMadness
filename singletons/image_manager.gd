@@ -1,6 +1,5 @@
 extends Node
 
-
 const FRAME_IMAGES: Array[Texture2D] = [
 	preload("res://assets/frames/blue_frame.png"),
 	preload("res://assets/frames/green_frame.png"),
