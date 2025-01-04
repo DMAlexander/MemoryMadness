@@ -28,7 +28,7 @@ func add_file_to_list(file_path: String) -> void:
 func get_random_item_image() -> ItemImage:
 	return _item_images.pick_random()
 
-func get_random_frame_image() -> ItemImage:
+func get_random_frame_image() -> Texture2D:
 	return FRAME_IMAGES.pick_random()
 
 func get_image(index: int) -> ItemImage:
