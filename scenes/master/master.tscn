@@ -18,6 +18,5 @@ texture = ExtResource("1_hkmr0")
 expand_mode = 1
 
 [node name="Main" parent="." instance=ExtResource("3_8k4s4")]
-visible = false
 
 [node name="Game" parent="." instance=ExtResource("4_lve64")]
