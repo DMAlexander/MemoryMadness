@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bce5fxvx51yi"]
+[gd_scene load_steps=8 format=3 uid="uid://bce5fxvx51yi"]
 
 [ext_resource type="LabelSettings" uid="uid://efdir2vdny11" path="res://assets/GM_32_Dark.tres" id="1_vl5be"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_wsy8a"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7nyrbw6ah5x2" path="res://assets/ui/green_button00.png" id="3_v5m2w"]
 [ext_resource type="LabelSettings" uid="uid://bb630qrhxr0ef" path="res://assets/GM_32_White.tres" id="4_jdau3"]
 [ext_resource type="PackedScene" uid="uid://d2rih07c1m02a" path="res://scenes/scorer/scorer.tscn" id="6_3lnpy"]
+[ext_resource type="PackedScene" uid="uid://co2q8wpajn8si" path="res://scenes/game_over_ui/game_over_ui.tscn" id="7_x5hiu"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -106,5 +107,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Scorer" parent="." instance=ExtResource("6_3lnpy")]
+
+[node name="GameOverUi" parent="." instance=ExtResource("7_x5hiu")]
+visible = false
+layout_mode = 1
 
 [connection signal="pressed" from="HB/MC2/VB/ExitButton" to="." method="_on_exit_button_pressed"]

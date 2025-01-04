@@ -54,6 +54,11 @@ func check_pair_made() -> void:
 	if selections_are_pair() == true:
 		kill_tiles()
 
+func check_game_over() -> void:
+	if _target_pairs == _pairs_made:
+		SignalManager.on_game_over.emit(_moves_made)
+
+
 func on_tile_selected(t: MemoryTile) -> void:
 	t.reveal(true)
 	_selections.append(t)
@@ -67,4 +72,5 @@ func _on_reveal_timer_timeout() -> void:
 			s.reveal(false)
 	_selections.clear()
 	# check game over
+	check_game_over()
 	SignalManager.on_selection_enabled.emit()
